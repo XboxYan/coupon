@@ -1,22 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <Header/>
+  <Main/>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+import Header from './components/header.vue'
+import Main from './components/main.vue'
 </script>
 
 <style>
+body{
+  margin: 0;
+}
 #app {
+  display: flex;
+  flex-direction: column;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+}
+a {
+  color: #42b983;
+}
+.main{
+  width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+}
+.card-con{
+  flex: 1;
+}
+.side{
+  flex: 1;
+  text-align: left;
+  align-self: flex-start;
+}
+.card{
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  background: linear-gradient(45deg, orange, red);
 }
 </style>
