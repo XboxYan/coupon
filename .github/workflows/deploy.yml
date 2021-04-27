@@ -24,4 +24,4 @@ jobs:
           clean-exclude: |
             special-file.txt
             some/*.txt
-          ssh-key: ${{ secrets.ACCESS_TOKEN }}
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
