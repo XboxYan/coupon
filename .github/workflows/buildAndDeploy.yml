@@ -5,7 +5,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 我们选择使用最新的ubuntu系统
     steps:
-    - name: buildAndDeploy
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2.3.1
+    - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.1 
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 使用刚新建的secret
