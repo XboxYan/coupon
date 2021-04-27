@@ -18,8 +18,8 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: gh-pages
-          folder: build
+          branch: main
+          folder: dist
           clean: true
           clean-exclude: |
             special-file.txt
