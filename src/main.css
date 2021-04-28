@@ -44,7 +44,7 @@ a {
 
 .card {
     width: 400px;
-    height: 300px;
+    height: 250px;
     margin: auto;
     background: linear-gradient(var(--theme),#2c3e50);
 }
@@ -86,6 +86,72 @@ a {
     transform: scale(1.05);
     box-shadow:  0 0 0 0.25rem rgba(255,255,255,0.6), 0 0 0 0.25rem var(--theme);
 }
+[type=range][data-tips] {
+    position: relative;
+}
+
+[type="range"][data-tips] {
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 .75rem;
+}
+
+[type="range"][data-tips]::-webkit-slider-runnable-track {
+    margin: 0 -.75rem;
+}
+
+[type=range][data-tips]::before,
+[type=range][data-tips]::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -20px);
+    opacity: 0;
+    transition: all .15s .15s, left 0s, top 0s;
+    color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    pointer-events: none;
+    font-family: Inconsolata,Monaco,Consolas,"Courier New",Courier,monospace;
+}
+
+[type=range][data-tips]::before {
+    content: attr(data-tips);
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+    width: max-content;
+    max-width: 200px;
+    left: calc(var(--percent, .5) * 100%);
+    bottom: 100%;
+    transform: translate(-50%, -1rem);
+}
+
+[type=range][data-tips]::after {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: 0.5rem solid transparent;
+    left: calc(var(--percent, .5) * 100%);
+    bottom: 100%;
+    transform: translate(-50%, -1rem);
+    margin-bottom: -1rem;
+    border-top-color: #2c3e50;
+}
+
+[type=range][data-tips]:not([data-tips*="$"]):hover::before,
+[type=range][data-tips]:not([data-tips*="$"]):hover::after,
+[type=range][data-tips]:not([data-tips*="$"]):focus::before,
+[type=range][data-tips]:not([data-tips*="$"]):focus::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -1.5rem);
+}
 /* type=radio */
 [type="radio"] {
     font-size: 100%;
@@ -96,6 +162,7 @@ a {
     font-size: 1.4rem;
     padding: 0.3em 0.5em;
     background: #F3F4F5;
+    cursor: pointer;
     outline: 0;
     margin: 0;
 }
