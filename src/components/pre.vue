@@ -4,7 +4,7 @@
       class="pre"
       ref="pre"
     ><template v-for="(value, name, index) in style" :key="name">{{index!==0?'\n':''}}<code>{{name}}</code>: {{value}};</template></pre>
-    <button class="copy" @click="copy">Copy</button>
+    <button class="copy" @click="copy" :hidden="state.copied">Copy</button>
     <textarea class="hidden" ref="txt" readonly></textarea>
   </div>
 </template>
