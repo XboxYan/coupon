@@ -86,9 +86,11 @@ const copy = () => {
   white-space: pre-wrap;
   line-height: 1.5;
   margin: 0;
+  font-family: Inconsolata,Monaco,Consolas,"Courier New",Courier,monospace;
 }
 code {
   color: var(--theme);
+  font-family: inherit;
 }
 .copy{
     position: absolute;
