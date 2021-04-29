@@ -19,7 +19,7 @@
         <input type="radio" name="pos" value="center" value1="center" value2="center" v-model="state.position"/>
         <input type="radio" name="pos" value="end" value1="right" value2="bottom" v-model="state.position"/>
       </section>
-      <section class="item" v-if="state.position!=='center'">
+      <section class="item" v-show="state.position!=='center'">
         <span class="name">offset</span>
         <input type="range" v-model="state.offset" :data-tips="state.offset+'px'" :style="{'--percent':state.offset / state.max}" :max="state.max" />
       </section>
