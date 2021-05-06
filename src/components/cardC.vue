@@ -27,9 +27,9 @@ import Pre from './pre.vue'
 import { ref, reactive, computed, onMounted } from 'vue'
 
 const state = reactive({ 
-  radius: 20,
+  radius: 10,
   direction: 'horizontal',
-  gap: 40
+  gap: 20
 })
 
 const style = computed(() => {
@@ -43,7 +43,8 @@ const style = computed(() => {
     horizontal,vertical,both
   }
   const composite = state.direction==='both'? {
-    '-webkit-mask-composite': 'source-out'
+    '-webkit-mask-composite': 'source-out',
+    'mask-composite': 'subtract',
   }:{}
   return {
     '-webkit-mask-image': image[state.direction],

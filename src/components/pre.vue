@@ -41,37 +41,27 @@ const copy = () => {
 <style scoped>
 .pre-wrap {
     position: relative;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 .pre-wrap::after{
-    content: 'Copied to clipboard!';
+    content: '🎉 Copied to clipboard!';
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: #f3f4f5;
-    font-size: 1.5rem;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: .2s;
-}
-.pre-wrap::before{
-    content: '';
-    position: absolute;
+    display: flex;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: var(--theme);
-    opacity: 0.8;
-    border-radius: 0.5rem;
-    pointer-events: none;
+    color: #f3f4f5;
+    font-size: 1.5rem;
+    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), linear-gradient(var(--theme),var(--theme));
     opacity: 0;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
     visibility: hidden;
     transition: .2s;
+    z-index: 2;
 }
-.pre-wrap.copied::before,
 .pre-wrap.copied::after{
     opacity: 1;
     visibility: visible;

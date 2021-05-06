@@ -17,7 +17,7 @@ import Pre from './pre.vue'
 import { ref, reactive, computed, onMounted } from 'vue'
 
 const state = reactive({ 
-  radius: 20,
+  radius: 10,
 })
 
 const style = computed(() => {

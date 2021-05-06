@@ -32,10 +32,10 @@ import Pre from './pre.vue'
 import { ref, reactive, computed, onMounted } from 'vue'
 
 const state = reactive({ 
-  radius: 20,
-  direction: 'horizontal',
-  position: 'center',
-  offset: 40
+  radius: 10,
+  direction: 'vertical',
+  position: 'start',
+  offset: 50
 })
 
 const style = computed(() => {
