@@ -79,14 +79,18 @@ const copy = () => {
   font-family: Inconsolata,Monaco,Consolas,"Courier New",Courier,monospace;
 }
 code {
-  color: var(--theme);
+  color: transparent;
   font-family: inherit;
+  background: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),linear-gradient(var(--theme),var(--theme));
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .copy{
     position: absolute;
     right: 0;
     top: 0;
     border: 0;
+    margin: 0;
     outline: 0;
     background: var(--theme);
     color: #f3f4f5;

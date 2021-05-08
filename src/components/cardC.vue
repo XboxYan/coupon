@@ -29,7 +29,7 @@ import { ref, reactive, computed, onMounted } from 'vue'
 const state = reactive({ 
   radius: 10,
   direction: 'horizontal',
-  gap: 20
+  gap: 28
 })
 
 const style = computed(() => {
@@ -50,7 +50,7 @@ const style = computed(() => {
     '-webkit-mask-image': image[state.direction],
     '-webkit-mask-position': state.direction==='both'?`-${state.radius}px, 50% -${state.radius}px`:postion,
     '-webkit-mask-size': state.direction==='both'?`100% ${gap}, ${gap} 100%`:size,
-    '-webkit-mask-repeat': 'round',
+    // '-webkit-mask-repeat': 'round',
     ...composite
   }
 })

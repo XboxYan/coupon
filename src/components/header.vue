@@ -24,7 +24,7 @@
 
 <style scoped>
 h1 {
-  font-size: 4em;
+  font-size: 4rem;
   margin-bottom: 0;
 }
 h2 {
@@ -41,8 +41,9 @@ h2 {
 .github-corner svg {
   color: #fff;
   fill: var(--theme);
-  height: 80px;
-  width: 80px;
+  height: 5rem;
+  width: 5rem;
+  vertical-align: text-top;
 }
 .github-corner:hover .octo-arm {
   animation: octocat-wave 0.56s ease-in-out;

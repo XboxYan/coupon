@@ -11,4 +11,4 @@ npm install
 npm run dev
 ```
 
-Then Open http://localhost:3000 to view it
+Then open http://localhost:3000
