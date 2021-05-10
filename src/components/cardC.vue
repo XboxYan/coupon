@@ -10,9 +10,9 @@
       </section>
       <section class="item">
         <span class="name">direction</span>
-        <input type="radio" name="dir" value="horizontal" v-model="state.direction" />
-        <input type="radio" name="dir" value="vertical" v-model="state.direction" />
-        <input type="radio" name="dir" value="both" v-model="state.direction" />
+        <label class="radio" data-tips="horizontal"><input type="radio" name="dir" value="horizontal" v-model="state.direction" /></label>
+        <label class="radio" data-tips="vertical"><input type="radio" name="dir" value="vertical" v-model="state.direction" /></label>
+        <label class="radio" data-tips="both"><input type="radio" name="dir" value="both" v-model="state.direction" /></label>
       </section>
       <section class="item">
         <span class="name">gap</span>
@@ -64,17 +64,5 @@ onMounted(()=>{
 
 </script>
 <style scoped>
-h1{
-    font-size: 4em;
-    margin-bottom: 0;
-}
-h2{
-    font-weight: normal;
-}
-/* [name="pos"][type="radio"]::before{
-  content: attr(value2);
-}
-[direction="vertical"] [name="pos"][type="radio"]::before{
-  content: attr(value1);
-} */
+
 </style>

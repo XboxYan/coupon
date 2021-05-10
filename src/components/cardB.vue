@@ -38,17 +38,5 @@ onMounted(()=>{
 
 </script>
 <style scoped>
-h1{
-    font-size: 4em;
-    margin-bottom: 0;
-}
-h2{
-    font-weight: normal;
-}
-/* [name="pos"][type="radio"]::before{
-  content: attr(value2);
-}
-[direction="vertical"] [name="pos"][type="radio"]::before{
-  content: attr(value1);
-} */
+
 </style>
