@@ -5,7 +5,7 @@
       ref="pre"
     ><template v-for="(value, name, index) in style" :key="name">{{index!==0?'\n':''}}<code>{{name}}</code>: {{value}};</template></pre>
     <button data-tips="copy" class="copy" @click="copy" :class="{copied: state.copied}"></button>
-    <textarea class="hidden" ref="txt" readonly></textarea>
+    <textarea tabindex="-1" class="hidden" ref="txt" readonly></textarea>
   </div>
 </template>
 <script setup>
