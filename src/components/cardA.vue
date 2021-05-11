@@ -15,9 +15,9 @@
       </section>
       <section class="item" :direction="state.direction">
         <span class="name">position</span>
-        <input type="radio" name="pos" value="start" value1="left" value2="top" v-model="state.position"/>
-        <input type="radio" name="pos" value="center" value1="center" value2="center" v-model="state.position"/>
-        <input type="radio" name="pos" value="end" value1="right" value2="bottom" v-model="state.position"/>
+        <label class="radio" :data-tips="state.direction=='vertical'?'left':'top'"><input type="radio" name="pos" value="start" v-model="state.position"/></label>
+        <label class="radio" data-tips="center"><input type="radio" name="pos" value="center" v-model="state.position"/></label>
+        <label class="radio" :data-tips="state.direction=='vertical'?'right':'bottom'"><input type="radio" name="pos" value="end" v-model="state.position"/></label>
       </section>
       <section class="item" v-show="state.position!=='center'">
         <span class="name">offset</span>
@@ -94,21 +94,6 @@ const max = computed(() => {
 
 </script>
 <style scoped>
-[type="radio"][name="split"]::before{
-  content: '\A';
-  display: block;
-  width: 2rem;
-  white-space: pre;
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  color: inherit;
-  background: currentColor;
-  /* opacity: 0.5; */
-}
-[type="radio"][name="split"]:checked::before{
-  opacity: 1;
-}
 [type="radio"][name="split"][value="none"]::before{
   opacity: 0;
 }
