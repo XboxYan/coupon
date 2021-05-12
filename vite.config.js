@@ -15,15 +15,15 @@ export default defineConfig({
       "background_color": "#fff",
       "description": "Generate Coupon-UI CSS code",
       "icons": [ {
-        "src": "favicon.svg",
+        "src": "favicon.72.svg",
         "sizes": "72x72",
         "type": "image/svg"
       }, {
-        "src": "favicon.svg",
+        "src": "favicon.144.svg",
         "sizes": "144x144",
         "type": "image/svg"
       }, {
-        "src": "favicon.svg",
+        "src": "favicon.192.svg",
         "sizes": "192x192",
         "type": "image/svg"
       }],
