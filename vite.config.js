@@ -15,9 +15,8 @@ export default defineConfig({
       "background_color": "#fff",
       "description": "Generate Coupon-UI CSS code",
       "icons": [{
-        "src": "favicon.256.png",
+        "src": "icon.svg",
         "sizes": "256x256",
-        "type": "image/png"
       }],
       "theme_color": "#4fc08d"
     },
