@@ -14,18 +14,9 @@ export default defineConfig({
       "display": "standalone",
       "background_color": "#fff",
       "description": "Generate Coupon-UI CSS code",
-      "icons": [ {
-        "src": "favicon.72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-      }, {
-        "src": "favicon.144.png",
-        "sizes": "144x144",
-        "type": "image/png",
-        "purpose": "any"
-      }, {
-        "src": "favicon.192.png",
-        "sizes": "192x192",
+      "icons": [{
+        "src": "favicon.256.png",
+        "sizes": "256x256",
         "type": "image/png"
       }],
       "theme_color": "#4fc08d"
