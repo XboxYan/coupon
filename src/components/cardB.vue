@@ -17,12 +17,10 @@ import Pre from './pre.vue'
 import { ref, reactive, computed, onMounted } from 'vue'
 
 const state = reactive({ 
-  corner: 10,
+  corner: 20,
 })
 
 const style = computed(() => {
-  const offset = state.position==='center'?'50%':state.offset+'px';
-  const position = `${state.direction==='horizontal'?'':'0 '}${state.position==='end'?'':'-'}${state.corner}px`;
   return {
     '-webkit-mask-image': `radial-gradient(circle at ${state.corner}px ${state.corner}px, transparent ${state.corner}px, red ${state.corner}.5px)`,
     '-webkit-mask-position': `-${state.corner}px -${state.corner}px`

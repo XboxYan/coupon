@@ -24,16 +24,16 @@
         <input type="range" v-model="state.offset" :data-tips="state.offset+'px'" :style="{'--percent':state.offset / max.offset}" :max="max.offset" />
       </section>
       <section class="item">
-        <span class="name">split</span>
+        <span class="name">dash</span>
         <label class="radio" data-tips="dashed"><input type="radio" name="split" value="dashed" v-model="state.split" /></label>
         <label class="radio" data-tips="dotted"><input type="radio" name="split" value="dotted" v-model="state.split" /></label>
       </section>
       <section class="item">
-        <span class="name">size</span>
+        <span class="name">dashsize</span>
         <input type="range" v-model="state.size" :data-tips="state.size+'px'" :style="{'--percent':state.size / state.radius / 2}" :max="2*state.radius"/>
       </section>
       <section class="item">
-        <span class="name">gap</span>
+        <span class="name">dashoffset</span>
         <input type="range" v-model="state.gap" :data-tips="state.gap+'px'" :style="{'--percent':state.gap / state.radius / 2}" :max="2*state.radius"/>
       </section>
       <Pre :style="style"/>
