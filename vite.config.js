@@ -7,6 +7,7 @@ import {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(),VitePWA({
+    registerType: 'autoUpdate',
     manifest: {
       "name": "coupon.io",
       "short_name": "coupon",
