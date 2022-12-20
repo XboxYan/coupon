@@ -6,6 +6,8 @@ Generate Coupon-UI CSS code
 
 [online preview](https://coupon.codelabo.cn)
 
+[docs](https://juejin.cn/post/6961744399160213518)
+
 In the project directory, you can run:
 
 ```v
